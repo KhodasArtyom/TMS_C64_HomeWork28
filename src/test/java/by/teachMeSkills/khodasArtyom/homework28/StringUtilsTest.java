@@ -1,6 +1,5 @@
 package by.teachMeSkills.khodasArtyom.homework28;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -82,17 +81,34 @@ class StringUtilsTest {
     @Test
     void returnTrueIfArrayContainsSuArray() {
         char[] subArray = {'i','v','x'};
-        char[] array = {'f','i','v','x','c'};
-        assertEquals(true,StringUtils.contains(array,subArray));
+        char[] array = {'f', 'i', 'v', 'x', 'c'};
+        assertEquals(true, StringUtils.contains(array, subArray));
     }
 
     @Test
     void returnFalseIfArrayDoesNotContainsSubArray() {
-        char[] subArray = {'a','b','c'};
-        char[] array = {'f','i','v','x','c'};
-        assertEquals(false,StringUtils.contains(array,subArray));
+        char[] subArray = {'a', 'b', 'c'};
+        char[] array = {'f', 'i', 'v', 'x', 'c'};
+        assertEquals(false, StringUtils.contains(array, subArray));
     }
 
+    @Test
+    void returnTrueIfNotCorrectChars() {
+        char[] numbers = {'a', 'б'};
+        assertThrows(IllegalArgumentException.class, () -> StringUtils.parsInt(numbers));
+    }
+
+    @Test
+    void fallThisTestIfMethodDoNotThrowException() {
+        char[] numbers = {'0', '9'};
+        assertThrows(IllegalArgumentException.class, () -> StringUtils.parsInt(numbers));
+    }
+
+    @Test
+    void ifMethodParsIntReturnTrue() {
+        char[] numbers = {'1', '2', '3'};
+        assertEquals(123, StringUtils.parsInt(numbers));
+    }
 
 
 }

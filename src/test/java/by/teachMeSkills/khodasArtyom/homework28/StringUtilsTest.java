@@ -54,7 +54,7 @@ class StringUtilsTest {
 
     @Test
     void returnTrueIfUpperCaseWithOtherLetter() {
-        char[] chars = {'А', 'В', 'Г'};
+        char[] chars = {'А', 'Д', 'Г'};
         assertTrue(StringUtils.isRussian(chars));
     }
 

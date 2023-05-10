@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class StringUtilsTest {
+class StringUtilTest {
 
     private static final char[] elements = {'а', 'р', 'т', 'е', 'м'};
 

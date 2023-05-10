@@ -4,9 +4,8 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class StringUtilTest {
+class StringUtilsTest {
 
-    private static final char[] elements = {'а', 'р', 'т', 'е', 'м'};
 
     @Test
     void checkIfCharArrayIsBlank() {
